@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/login',routes);
-
+app.use('/pub',routes);
 app.use('/sub',routes);
 
 // catch 404 and forward to error handler
@@ -60,10 +60,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.set('port', process.env.PORT || 3000);
-
-var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
-});
-//module.exports = app;
+module.exports = app;
 

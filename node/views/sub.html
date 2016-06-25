@@ -6,8 +6,17 @@
 <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <link rel="stylesheet" href="/stylesheets/pub.css">
+  <script src="/javascripts/socket.io.js"></script>
+  <script src="/javascripts/socket.js"></script>
+  <script src="/javascripts/chat_ui.js"></script>
+  <script src="/javascripts/xss-escape.js"></script>
+  <script src="/javascripts/emotion.js"></script>
+  <script src="/javascripts/jquery.min.js"></script>
 
 </head>
+<script type="text/javascript">
+
+</script>
 <body>
 		<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -69,43 +78,19 @@
 	 <button type="submit" class="btn btn-info"><i class="fa fa-book fa-fw pull-left"></i>烟台日报</button>
 
 	 </div>
-	 <div class="col-xs-10">
-	 		<div class="thumbnail">
-      <img id="img_head" src="/images/head.jpg" class="img-circle pull-left" alt="烟台日报">&nbsp;&nbsp;&nbsp;&nbsp;<h4>烟台日报</h4>
-      <div class="caption">
-      <h2><%=title%></h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <a href="#" class="btn btn-primary" role="button">view dails &raquo;</a>
-      </div>
-    </div>
-  			<div class="thumbnail">
-      <img id="img_head" src="/images/head.jpg" class="img-circle pull-left" alt="烟台日报">&nbsp;&nbsp;&nbsp;&nbsp;<h4>烟台日报</h4>
+	 <div class="col-xs-10" id="messageBox" >
+      <div id="content" class="_content">
 
-      <div class="caption">
-      <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <a href="#" class="btn btn-primary" role="button">view dails &raquo;</a>
       </div>
-    </div>
-    
-    <div class="thumbnail">
-      <img id="img_head" src="/images/head.jpg" class="img-circle pull-left" alt="烟台日报">&nbsp;&nbsp;&nbsp;&nbsp;<h4>烟台日报</h4>
-
-      <div class="caption">
-      <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-        <a href="#" class="btn btn-primary" role="button">view dails &raquo;</a>
-      </div>
-    </div>
 	 </div>
    </div>	
 </div>
 <div id="bfoot">
 
 </div>
-    <footer id="foot">
-        fsdfsdfdsgfh
-    </footer>
+   <!--<footer id="foot">-->
+        <!--fsdfsdfdsgfh-->
+    <!--</footer>-->
 
 </body>
 </html>

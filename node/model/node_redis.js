@@ -16,6 +16,7 @@ redisModel.pub=function(pub_channel,message){
     //client3.publish('channelthree', 'Me too!');
     //client4.publish('channelfour', 'And me too!');
     //client4.publish('channelfive', 'And me too!');
+
   });
 }
 
@@ -30,7 +31,7 @@ redisModel.dispub=function(pub_channel,message){
   });
 }
 
-redisModel.getMessage=function(pattern,channel,callback){
+redisModel.getMessage=function(callback){
   client1.on('pmessage', function (pattern, channel, message) {
     console.log('(' + pattern + ') client1 received message on ' + channel + ': ' + message);
     msg_count += 1;
