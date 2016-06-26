@@ -9,8 +9,7 @@ var socket = io.connect(chat_server);
 socket.on('news', function (data) {
      //alert(data);
     addMessage(data);
-
-    console.log(data);
+    console.log(data+'fffsdads');
 });
 
 socket.on('need_nickname', function () {

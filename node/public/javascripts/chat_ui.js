@@ -10,18 +10,18 @@ function chatBodyToBottom() {
 
 function addMessage(_content) {
    // alert(_content);
-    var msg_list = $("._content");
+    var msg_list = $(".content");
 
 	_content = QxEmotion.Parse(_content);
-
+    _content=JSON.parse(_content);
     //console.log('server:');
     msg_list.append(
     '<div class="thumbnail">'+
       '<img id="img_head" src="/images/head.jpg" class="img-circle pull-left" alt="烟台日报"&nbsp;&nbsp;&nbsp;&nbsp;<h4></h4>'+
     '<div class="caption">'+
-    '<h2></h2>'+
-      '<p>'+_content+'</p>'+
-    '<a href="#" class="btn btn-primary" role="button">view dails &raquo;</a>'+
+    '<h2>'+_content.title+'</h2>'+
+      '<p>'+_content.contents+'</p>'+
+    '<a href="/article" class="btn btn-primary" role="button">view dails &raquo;</a>'+
     '</div></div>'
     );
 

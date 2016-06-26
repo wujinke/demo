@@ -30,7 +30,7 @@ app.use('/users', users);
 app.use('/login',routes);
 app.use('/pub',routes);
 app.use('/sub',routes);
-
+//app.use('/article',routes);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

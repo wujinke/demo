@@ -3,6 +3,7 @@ var personaModel = require('../model/persona');
 var redisModel = require('../model/node_redis');
 var router = express.Router();
 var server = require('../app.js');
+//var get = require('../chat_server');
 //var io=require('socket.io').listen(server);
 var count=0;
 //var User = require('./mysql');
@@ -68,20 +69,13 @@ router.route('/pub')
 		res.render('pub_user');
 	})
 	.post(function (req, res) {
-		//var user = {
-		//	username: req.body.username,
-		//	password : req.body.password
-		//};
-	//console.log(req.body.text);
-		//personaModel.obtenerListaPersonas(user,function(error,data) {
-		//	if (req.body.username === data[0].user_name && req.body.password === data[0].user_pwd && data[0].options=='1') {
-		//		res.redirect('/pub_user');
-		//		console.log(data);
-		//	}
-		//	else
-		//		res.redirect('/index');
-		//})
+
 	});
+//router.get('/article',function(req,res,next)
+//{
+//	var content= get.gethtml();
+//	res.render('dail',{title:content.title,content:content.contents})
+//})
 module.exports = router;
 
 

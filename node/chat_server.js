@@ -5,36 +5,33 @@ var io = require('socket.io')();
 var xssEscape = require('xss-escape');
 var redisModel = require('./model/node_redis');
 var nickname_list = [];
-
-function HasNickname(_nickname) {
-    for (var i = 0; i < nickname_list.length; i++) {
-        if (nickname_list[i] == _nickname) {
-            return true;
-        }
-    }
-    return false;
-}
-
-function RemoveNickname(_nickname) {
-    for (var i = 0; i < nickname_list.length; i++) {
-        if (nickname_list[i] == _nickname)
-            nickname_list.splice(i, 1);
-    }
-}
+var content;
+//exports.gethtml=function(){
+//    return content;
+//}
 
 io.on('connection', function (_socket) {
-   // console.log(_socket.id + ': connection');
+    console.log(_socket.id + ': connection');
     //_socket.emit('news', 'dwdsada');
     redisModel.getMessage(function (error, msg) {
         console.log('connection' + 'fffff');
-        console.log(msg);
+       var  _content=JSON.parse(msg);
+      //  content=_content;
+        console.log(_content.contents);
         _socket.emit('news', msg);
+    })
+    _socket.on('message',function(data){
+
+      //  console.log(data);
+        redisModel.pub('channeltwo',data);
+        //_socket.emit('add',data);
     })
     //_socket.emit('need_nickname');
     //_socket.emit('server_message', 'fffffff');
 
     _socket.on('disconnect', function () {
         console.log(_socket.id + ': disconnect');
+       // redisModel.dispub('channelone');
         //if (_socket.nickname != null && _socket.nickname != "") {
         //    _socket.broadcast.emit('user_quit', _socket.nickname);
         //    RemoveNickname(_socket.nickname);
