@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订阅</title>
+<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="/stylesheets/pub.css">
+  <script src="/javascripts/socket.io.js"></script>
+  <script src="/javascripts/socket.js"></script>
+  <script src="/javascripts/chat_ui.js"></script>
+  <script src="/javascripts/xss-escape.js"></script>
+  <script src="/javascripts/emotion.js"></script>
+  <script src="/javascripts/jquery.min.js"></script>
+
+</head>
+<script type="text/javascript">
+  var chat_server = 'http://' + '127.0.0.1' + ':3000';
+  var socket = io();
+  $(document).ready(function() {
+// put all your jQuery goodness in here.
+    var user_id='<%=user_id%>';
+    socket.emit('login',user_id);
+    $('#addtitle').click(function(){
+    //  alert('dddd');
+   //   var user_id='<%=user_id%>';
+
+      var info={
+        user_id:user_id,
+        title:document.getElementById('title').value
+      }
+     // alert(user_id);
+      socket.emit('add',info);
+
+    })
+  });
+
+</script>
+<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Project</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-right" role="search">
+       <div class="input-group">
+               <span class="input-group-btn">
+                  <button class="btn btn-default" type="button" id="addtitle">
+                    <i class="fa fa-plus-square fa-fw"></i>
+                  </button>
+               </span>
+               <input type="text" class="form-control" placeholder="喜欢的主题" id="title">
+            </div><!-- /input-group -->
+        <div class="btn-group" role="group" aria-label="false">
+        <a type="button" class="btn btn-default" href="/"><i class="fa fa-home fa-fw"></i></a>
+        <button type="button" class="btn btn-default"><i class="fa fa-user fa-fw"></i></button>
+        <button type="submit" class="btn btn-default" ><i class="fa fa-cog fa-fw"></i></button>
+        <button type="submit" class="btn btn-warning"><i class="fa fa-close fa-fw"></i></button>
+    </div><!-- /.navbar-collapse -->
+      </form>
+  </div>
+    </div><!-- /.container-fluid -->
+</nav>
+
+   		<!--<iframe src="pub_head.html" frameborder="0" scrolling="no" width=100% height=50%></iframe>-->
+   		 <div class="jumbotron">
+   		 <div	class="container-fluid">	
+       <div id="head">
+          <a href="#" onclick="" >
+          <img src="/images/header.jpg" class="img-circle" alt="头像不显示了！">
+
+          </a>
+             <br> 
+            <span class="text"> 简介： 这是鲁大，生于忧患</span>
+   
+       </div>
+   			
+        </div>
+   		 </div>
+
+<div   class="container-fluid">
+   <div class="row">
+	 <div class="col-md-2">
+	  <h3>我喜欢的：</h3>
+   <br>
+     <div>
+       <button type="submit" class="btn btn-info"><i class="fa fa-book fa-fw pull-left"></i>烟台日报</button>
+     </div>
+
+
+	 </div>
+	 <div class="col-xs-10" id="messageBox" >
+      <div  class="content">
+
+      </div>
+	 </div>
+   </div>	
+</div>
+<div id="bfoot">
+
+</div>
+   <!--<footer id="foot">-->
+        <!--fsdfsdfdsgfh-->
+    <!--</footer>-->
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>oursr redis desinger Registration </title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="/register/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/register/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/register/css/form-elements.css">
+        <link rel="stylesheet" href="/register/css/style.css">
+			<link rel="stylesheet" href="/register/css/bootstrap-select.min.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#reg').click(function(){
+			var data='<%=info%>';
+			alert(data);
+			if(data!=null)
+			{
+				alert('注册成功');
+				window.location.href='index.html';
+			}
+
+			else
+				alert('注册失败');
+
+		})
+	})
+	window.onload=function(){
+		$('.selectpicker').selectpicker({
+			style: 'btn-primary',
+			size: 4
+		});
+		}
+</script>
+    <body>
+
+		<!-- Top menu -->
+		<nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+						<span class="sr-only">jiunshu navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">oursr redis desinger Registrat</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="top-navbar-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<span class="li-text">
+								Put some text or
+							</span> 
+							<a href="#"><strong>links</strong></a> 
+							<span class="li-text">
+								here, or some icons: 
+							</span> 
+							<span class="li-social">
+								<a href="#"><i class="fa fa-facebook"></i></a> 
+								<a href="#"><i class="fa fa-twitter"></i></a> 
+								<a href="#"><i class="fa fa-envelope"></i></a> 
+								<a href="#"><i class="fa fa-skype"></i></a>
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>Redis</strong> Multi Step Registration Form</h1>
+                            <div class="description">
+                            	<p>
+	                            	This is a desinger form made with our team for our project . 
+	                            	Download it on <a href="http://baidu"><strong>kaoyan</strong></a>, customize and use it as you like!
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	
+                        	<form role="form" action="" method="post" class="registration-form">
+                        		
+                        		<fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                        			<h3>welcome to our space</h3>
+		                            		<p>Tell us who you are:</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<i class="fa fa-user"></i>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">
+				                    	<div class="form-group">
+				                    		<label class="sr-only" for="form-name">your name</label>
+				                        	<input type="text" name="username" placeholder="name..." class="name form-control" id="form-name">
+				                        </div>
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="password">your password</label>
+				                        	<input type="password" name="password" placeholder="password..." class="password form-control" id="password">
+				                        </div>
+																	<div class="form-group">
+																		<label class="sr-only" for="form-repeat-password">Repeat password</label>
+																		<input type="password" name="form-repeat-password" placeholder="Repeat password..."
+																					 class="form-repeat-password form-control" id="form-repeat-password">
+																	</div>
+				                        <button type="button" class="btn btn-next">Next</button>
+				                    </div>
+			                    </fieldset>
+			                    
+			                    <fieldset>
+		                        	<div class="form-top">
+		                        		<div class="form-top-left">
+		                        			<h3>Step 2 / 2</h3>
+		                            		<p>Set up your account:</p>
+		                        		</div>
+		                        		<div class="form-top-right">
+		                        			<i class="fa fa-key"></i>
+		                        		</div>
+		                            </div>
+		                            <div class="form-bottom">
+				                        <div class="form-group">
+				                        	<label class="sr-only" for="form-email">Email</label>
+				                        	<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">
+				                        </div>
+				                        <div class="form-group">
+				                    		<label class="sr-only" for="form-sex">Sex</label>
+																	<select class="selectpicker" id="form-sex" name="sex">
+																		<option  value="男" data-subtext="男">男</option>
+																		<option value="女" data-subtext="女">女</option>
+																	</select>
+				                        </div>
+																	<div class="form-group">
+																		<label class="sr-only" for="form-Phone">Phone</label>
+																		<input type="text" name="phone" placeholder="phone..." class="form-facebook form-control" id="form-phone">
+																	</div>
+																	<div class="form-group">
+																		<label class="sr-only" for="form-Option">Phone</label>
+																		<select class="selectpicker" id="form-Option" name="option">
+																			<option value="0" data-subtext="订阅方">订阅方</option>
+																			<option value="1" data-subtext="发布方">发布方</option>
+																		</select>
+																	</div>
+				                        <button type="button" class="btn btn-previous">Previous</button>
+																	<button type="submit" class="btn" id="reg">Sign me up!</button>
+				                    </div>
+			                    </fieldset>
+		                    </form>
+		                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="/register/js/jquery-1.11.1.min.js"></script>
+        <script src="/register/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/register/js/jquery.backstretch.min.js"></script>
+        <script src="/register/js/retina-1.1.0.min.js"></script>
+        <script src="/register/js/scripts.js"></script>
+		<script src="/register/js/bootstrap-select.min.js"></script>
+        <!--[if lt IE 10]>
+						<script src="/register/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>

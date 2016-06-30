@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <link rel="stylesheet" href="/stylesheets/pub.css">
+   <script src="/javascripts/jquery.min.js"></script>
+   <script src="/javascripts/bootstrap.min.js"></script>
+ 
+</head>
+<script type="text/javascript">
+// $(document).ready(function(){   	//需要用ready()来刷新页面这样jquery的on方法才能有用
+//      $("#mybutton").on('click',function(){
+//      	var user= $("#user").val();
+//      	var pwd=$("#password").val();
+//      	if(user=='123'&&pwd=='123')
+//      		window.location.href='pub.html';
+//      })
+// });data-toggle="modal" data-target="#exampleModal"
+
+</script>
+
+<body>	
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><i class="fa fa-home fa-fw fa-2x pull-left"></i>Welcome</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-right" role="search">
+    
+        <div class="btn-group" role="group" aria-label="false">
+        <button type="button"  class="btn btn-default">随便看看</button>
+
+           <a  class="btn btn-default"  href="/login">登录</a>
+         <a class="btn btn-default"  href="/reg">注册</a>
+        <!--<button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal1">注册</button>-->
+        <button type="button" class="btn btn-warning" >关于</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document" id="dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="exampleModalLabel">注册</h4>
+        </div>
+        <div class="modal-body">
+
+
+          <form class="form-horizontal"  role="form" method="POST">
+
+            <div class="container">
+              <div class="form-group">
+                <label for="user" class="control-label pull-left">账号：</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" name="user" id="user">
+                </div>
+
+              </div>
+              <div class="form-group">
+                <label for="password" class="control-label pull-left">密码：</label>
+                <div class="col-sm-3">
+                  <input type="password" name="pwd" class="form-control" id="password">
+                </div>
+              </div>
+            </div>
+
+            <a  class="btn btn-primary"  href="/login">submit</a>
+
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          <button type="button" class="btn btn-primary" >submit</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document" id="dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">注册</h4>
+      </div>
+      <div class="modal-body">
+     
+        <form class="form-horizontal">
+         <div class="container">
+          <div class="form-group">
+            <label for="user" class="control-label pull-left">账号：</label>
+            <div class="col-sm-3">
+            	<input type="text" class="form-control" id="user">
+            </div>
+            
+          </div>
+          <div class="form-group">
+            <label for="password" class="control-label pull-left">密码：</label>
+            <div class="col-sm-3">
+            	<input type="password" class="form-control" id="password">
+            </div>
+            </div>
+            <div class="form-group">
+            <label for="email" class="control-label pull-left">邮箱：</label>
+            <div class="col-sm-3">
+            	<input type="email" class="form-control" id="email">
+            </div>
+            </div>
+       
+          </div>
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   		<!--<iframe src="pub_head.html" frameborder="0" scrolling="no" width=100% height=50%></iframe>-->
+   		 <div class="jumbotron">
+   		 <div	class="container-fluid">	
+        </div>
+   		 </div>
+		<h2 class="hfont">推荐</h2>		
+		<hr>
+<div  class="container-fluid">
+		<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p><%=title%></p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="hfont">社会热点</h2>
+<hr>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="hfont">时政要闻</h2>
+<hr>
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+   <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img_info img-rounded pull-left" src="/images/head.jpg" alt="不显示了">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+<div id="bfoot">
+
+</div>
+
+<div id="foot_index">
+</div>
+    <footer id="footer" class="footer">
+        fsdfsdfdsgfh
+    </footer>
+</body>
+</html>
